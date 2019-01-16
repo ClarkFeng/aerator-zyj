@@ -1,0 +1,15 @@
+/**app.wxss**/
+/**图标库 http://www.fontawesome.com.cn/faicons/**/
+@import 'weui.wxss';
+@import 'stylesheet.wxss';
+@import 'font-awesome.wxss';
+
+
+
+
+page{
+  
+   background-color: #4dd5f7;
+}
+
+

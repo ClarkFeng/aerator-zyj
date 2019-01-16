@@ -1,0 +1,29 @@
+/* pages/fishponddetail/fishponddetail.wxss */
+.my-title {
+margin-top: 10px;
+margin-bottom: 10px;
+
+padding-left:15px;
+padding-right:5px;
+color:#999;
+font-size:14px;
+display: flex;
+flex-direction: row;
+ justify-content: space-between;
+  align-items: center;
+}
+.weui-cells_after-title{
+  margin: 5px;
+}
+
+.title{
+  flex: 1;
+  color: #ffffff;
+}
+
+.refresh{
+  margin-left: 3px;
+}
+
+
+

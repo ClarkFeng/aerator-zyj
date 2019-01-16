@@ -1,0 +1,19 @@
+{
+  "pages": [
+           
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/fishpondadd/fishpondadd",
+  "pages/fishponddetail/fishponddetail",
+    "pages/aeratordetail/aeratordetail",
+    "pages/aeratoradd/aeratoradd",
+    "pages/fishpondmanage/fishpondmanage"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#4dd5f7",
+    "navigationBarTitleText": "增氧机管理",
+    "navigationBarTextStyle": "white"
+    
+  }
+}

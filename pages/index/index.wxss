@@ -1,0 +1,49 @@
+/**index.wxss**/
+
+
+.page{
+ 
+  padding-top: 15%;
+ 
+  
+}
+.placeholder{
+
+    margin: 10px 15px;
+    padding: 0 5px;
+    text-align: center;
+    background-color: #26C281;
+    height: 150px;
+    line-height:150px;
+    color: #f4fafa;
+    font-size: 50px;
+   
+}
+.placeholder1{
+
+    margin: 10px 15px;
+    padding: 0  0 0 20px;
+    text-align: center;
+    background-color: #f59134;
+    height: 150px;
+    line-height:150px;
+    color: #f4fafa;
+    font-size: 50px;
+}
+
+.weui-flex__item{
+  background-color: rgba(255, 255, 255, 0.5);
+  margin: 10px 15px;
+ box-shadow:0px 2px 6px #000;
+  
+}
+
+
+text{
+      color: #ffffff;
+    opacity: 0.1;
+     margin-left: -55px;
+      font-size: 110px;
+      line-height: 110px;
+      
+}

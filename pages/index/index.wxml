@@ -1,0 +1,33 @@
+<!--index.wxml
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+</view>-->
+
+<view class="page">
+
+    <view class="page__bd">
+
+        <view class="weui-flex" bindtap='fishpondmanage'>
+           
+            <view class="weui-flex__item">
+            <view class="placeholder"><text style=' margin-left:-85px;' class="fa fa-cloud fa-2x"></text>鱼塘管理</view>
+            </view>
+        </view>
+        <view class="weui-flex">
+            
+            <view class="weui-flex__item">
+              
+              <view class="placeholder1"><text class="fa fa-jpy fa-2x"></text>费用管理</view>
+            </view>
+        </view>
+    </view>
+</view>

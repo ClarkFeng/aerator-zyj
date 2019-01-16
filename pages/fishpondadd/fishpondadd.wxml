@@ -1,0 +1,24 @@
+<!--pages/fishpondadd/fishpondadd.wxml-->
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+
+    <view class="page__bd">
+       <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_input">
+                
+                <view class="weui-cell__bd">
+                    <input class="weui-input" placeholder="请输入鱼塘名称"/>
+                </view>
+            </view>
+            <view class="weui-cell">
+                <view class="weui-cell__bd">
+                   <textarea class="weui-textarea" placeholder="请输入鱼塘描述,以便区分鱼塘" style="height: 3.3em" />
+                    <view class="weui-textarea-counter">0/100</view>
+                </view>
+             </view>
+           
+       </view>
+       <view class="weui-btn-area">
+            <button class="weui-btn" type="primary" bindtap="savefishpond">确定</button>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,35 @@
+<!--pages/fishponddetail/fishponddetail.wxml-->
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+
+    <view class="page__bd">
+        
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell">
+                <view >鱼塘名称</view>
+               
+            </view>
+            <view class="weui-cell">
+                
+                <view >说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字</view>
+            </view>
+        </view>
+
+        <view class="my-title"><view class='title'>关联增氧机</view>
+          <view class='refresh'><button  bindtap="aeratorrefresh"><text class='fa fa-refresh'></text>刷新</button></view>
+          <view class='refresh'><button type='primary' bindtap="aeratoradd"><text class='fa fa-plus'></text>增加</button></view>
+        
+        </view>
+       
+         <view class="weui-cells weui-cells_after-title">
+            <navigator url="../aeratordetail/aeratordetail" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__bd">增氧机名称</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access">运行状态</view>
+            </navigator>
+            <navigator url="../aeratordetail/aeratordetail" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__bd">增氧机名称</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access">运行状态</view>
+            </navigator>
+        </view>
+       
+    </view>
+</view>

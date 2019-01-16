@@ -1,0 +1,33 @@
+/* pages/aeratordetail/aeratordetail.wxss */
+.placeholder{
+    margin: 5px;
+    background-color: #EBEBEB;
+    
+}
+
+
+.bindbtn{
+   background-color: #071214;
+   color: #ffffff
+}
+
+.delbtn{
+  background-color: #f18117;
+  color: #ffffff
+}
+
+.bindbtn_hover{
+   background-color: #17a1c4;
+   color:rgba(255, 255, 255, 0.6);
+}
+
+.delbtn_hover{
+  background-color: #cc6d13;
+  color:rgba(255, 255, 255, 0.6);
+}
+
+.weui-cells_after-title {
+  margin:0px 5px;
+
+}
+
