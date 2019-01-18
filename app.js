@@ -2,14 +2,28 @@
 App({
   onLaunch: function () {
     // 展示本地存储能力
-    var logs = wx.getStorageSync('logs') || []
-    logs.unshift(Date.now())
-    wx.setStorageSync('logs', logs)
+    // var logs = wx.getStorageSync('logs') || []
+    // logs.unshift(Date.now())
+    // wx.setStorageSync('logs', logs)
 
     // 登录
     wx.login({
       success: res => {
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
+        if (res.code) {
+          // 发起网络请求
+          wx.request({
+            url: this.globalData.url +'/api/zyj/onLogin',
+            method: 'POST',
+            data: {
+              code: res.code
+            }
+          })
+        } else {
+          console.log('登录失败！' + res.errMsg)
+        }
+
+
       }
     })
     // 获取用户信息
@@ -34,6 +48,9 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+
+    url:"http://fyd0108.xicp.io",
+    userInfo: null,
+    userSign: null,
   }
 })

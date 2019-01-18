@@ -1,4 +1,5 @@
 // pages/fishponddetail/fishponddetail.js
+const app = getApp()
 Page({
 
   /**
@@ -19,11 +20,18 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var that = this;
-    that.setData({
-      id: options.id
+    // var that = this;
+    // that.setData({
+    //   id: options.id
+    // })
+    // console.log("接收的id是"+that.data.id)
+
+
+    wx.showLoading({
+      title: '加载中',
+      mask: true,
     })
-    console.log("接收的id是"+that.data.id)
+    this.getAerators();
   },
 
   /**
@@ -73,5 +81,38 @@ Page({
    */
   onShareAppMessage: function () {
 
-  }
+  },
+
+  getAerators: function () {
+
+    var that = this;   // 这个地方非常重要，重置data{}里数据时候setData方法的this应为以及函数的this, 如果在下方的sucess                         直接写this就变成了wx.request()的this了
+
+    wx.request({
+      url: app.globalData.url + '/api/zyj/aerators/query', // 仅为示例，并非真实的接口地址
+      data: {
+        x: '1',
+        y: '2'
+      },
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      method: 'POST',
+      success(res) {
+        console.log(res.data),
+          that.setData({
+            grids: res.data.datas,
+          })
+        wx.hideLoading();
+      },
+      fail(res) {
+        console.log(res.data)
+        wx.hideLoading();
+      },
+      complete(res) {
+        wx.hideLoading();
+        //wx.stopPullDownRefresh() //停止下拉刷新
+      },
+    })
+
+  },
 })

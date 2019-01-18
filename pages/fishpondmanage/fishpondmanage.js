@@ -1,4 +1,5 @@
 // pages/fishpondmanage/fishpondmanage.js
+const app = getApp()
 Page({
 
   /**
@@ -89,7 +90,7 @@ Page({
     var that = this;   // 这个地方非常重要，重置data{}里数据时候setData方法的this应为以及函数的this, 如果在下方的sucess                         直接写this就变成了wx.request()的this了
 
     wx.request({
-      url: 'http://fyd0108.xicp.io/api/zyj/fishponds/query', // 仅为示例，并非真实的接口地址
+      url: app.globalData.url+'/api/zyj/fishponds/query', // 仅为示例，并非真实的接口地址
       data: {
         x: '1',
         y: '2'
