@@ -13,7 +13,20 @@
 </view>-->
 
 <view class="page">
-
+    <view class="page__hd">
+        <swiper
+            indicator-dots="{{indicatorDots}}"
+            autoplay="{{autoplay}}"
+            interval="{{interval}}"
+            duration="{{duration}}"
+          >
+            <block wx:for="{{imgUrls}}">
+              <swiper-item>
+                <image src="{{item}}" class="slide-image" mode='widthFix' width="355" height="150" />
+              </swiper-item>
+            </block>
+          </swiper>
+    </view>
     <view class="page__bd">
 
         <view class="weui-flex" bindtap='fishpondmanage'>
@@ -26,7 +39,14 @@
             
             <view class="weui-flex__item">
               
-              <view class="placeholder1"><text class="fa fa-jpy fa-2x"></text>费用管理</view>
+              <view class="placeholder"><text style="margin-left: -60px;margin-right:10px"  class="fa fa-jpy fa-2x"></text>费用管理</view>
+            </view>
+        </view>
+        <view class="weui-flex">
+            
+            <view class="weui-flex__item">
+              
+              <view class="placeholder"><text style="margin-left: -65px;margin-right:10px" class="fa fa-user fa-2x"></text>用户管理</view>
             </view>
         </view>
     </view>
