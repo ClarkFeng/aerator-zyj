@@ -28,6 +28,27 @@
 
 .weui-cells_after-title {
   margin:0px 5px;
+ font-size: 40rpx;
+}
+.title{
+  flex: 1;
+  color: rgb(114, 113, 113);
+  margin-left:20rpx;
 
 }
+.canshu {
+  background-color: rgb(100, 97, 97);
+  color: #fff;
+  /* font-weight:bold; */
+ font-size: 50rpx;
+}
+.canshu .weui-cell__ft{
+  /* background-color: #000; */
+  color: #fff;
+}
 
+.canshu .weui-cell__bd{
+  /* background-color: #000; */
+  color: #fff;
+  font-style: italic;
+}

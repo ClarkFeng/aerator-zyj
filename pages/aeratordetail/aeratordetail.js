@@ -79,6 +79,17 @@ Page({
 
   },
 
+  bindme:function(){
+    wx.showLoading({
+      title: '加载中',
+      mask: true,
+    });
+    setTimeout(function(){
+      wx.hideLoading()
+    },5000)
+
+  },
+
   posOpen:function(){
     wx.showLoading({
       title: '加载中',

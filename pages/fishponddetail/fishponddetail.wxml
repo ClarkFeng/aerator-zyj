@@ -15,12 +15,12 @@
         </view>
 
         <view class="my-title"><view class='title'>关联增氧机</view>
-          <view class='refresh'><button  bindtap="aeratorrefresh"><text class='fa fa-refresh'></text>刷新</button></view>
+          <view class='refresh'><button style="background-color: #ffffff;"  bindtap="aeratorrefresh"><text  class='fa fa-refresh'></text>刷新</button></view>
           <view class='refresh'><button type='primary' bindtap="aeratoradd"><text class='fa fa-plus'></text>增加</button></view>
         
         </view>
        
-         <view class="weui-cells weui-cells_after-title">
+         <view class="weui-cells weui-cells_after-title mingxi">
           <block wx:for="{{grids}}" wx:key="{{index}}"  wx:for-index="index" wx:for-item="item">
               <navigator url="../aeratordetail/aeratordetail?name={{item.name}}&description={{item.description}}&bindequipmentid={{item.bindequipmentid}}" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
                   <view data-name='{{item.name}}' class="weui-cell__bd">{{item.name}}</view>

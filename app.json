@@ -1,14 +1,14 @@
 {
   "pages": [
-        
+      
     "pages/index/index",
     "pages/logs/logs",
     "pages/fishpondadd/fishpondadd",
 "pages/fishponddetail/fishponddetail",
-
+"pages/fishpondmanage/fishpondmanage",
     "pages/aeratordetail/aeratordetail",
-    "pages/aeratoradd/aeratoradd",
-    "pages/fishpondmanage/fishpondmanage"
+    "pages/aeratoradd/aeratoradd"
+    
   ],
   "window": {
     "backgroundTextStyle": "dark",

@@ -4,10 +4,11 @@
     <view class="page__bd">
         <view class="weui-flex">
             <view class="weui-flex__item"><view class="placeholder"><button class="delbtn" hover-class='delbtn_hover'>删除</button></view></view>
-            <view class="weui-flex__item"><view class="placeholder"><button class="bindbtn" hover-class='bindbtn_hover'>绑定</button></view></view>
+            <view class="weui-flex__item"><view class="placeholder"><button bindtap="bindme" class="bindbtn" hover-class='bindbtn_hover'>绑定</button></view></view>
             <view class="weui-flex__item"><view class="placeholder"><button bindtap="posOpen" type="primary">启动</button></view></view>
             <view class="weui-flex__item"><view class="placeholder"><button bindtap="stop" type="warn">停止</button></view></view>
         </view>
+        <view class='title'>设备名称及描述</view>
         <view class="weui-cells weui-cells_after-title">
             <view class="weui-cell">
                 <view data-name='{{name}}'>{{name}}</view>
@@ -21,6 +22,9 @@
                 
                 <view data-bindequipmentid='{{bindequipmentid}}'>{{bindequipmentid}}</view>
             </view>
+        </view>
+        <view class='title'>运行参数</view>
+        <view class="weui-cells weui-cells_after-title canshu">
             <view class="weui-cell">
                 <view class="weui-cell__bd">运行状态</view>
                 <view class="weui-cell__ft">说明文字</view>

@@ -14,16 +14,31 @@ flex-direction: row;
 }
 .weui-cells_after-title{
   margin: 5px;
+  font-size: 40rpx;
 }
 
 .title{
   flex: 1;
-  color: #ffffff;
+  color: rgb(114, 113, 113);
 }
 
 .refresh{
   margin-left: 3px;
 }
 
+.mingxi .weui-cell__ft {
+  /* background-color: #000; */
+  color: #fff;
+}
+.mingxi{
+  background-color: rgb(100, 97, 97);
+  color: #fff;
+  font-size: 50rpx;
+  
+}
+.weui-cell{
+  border-color:#ffffff;
+
+}
 
 
