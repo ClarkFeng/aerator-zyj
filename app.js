@@ -17,7 +17,22 @@ App({
             method: 'POST',
             data: {
               code: res.code
-            }
+            },
+            success(res) {
+              // console.log(res.data);
+              if(res.data.issuccess==1){
+                wx.clearStorageSync()
+                wx.setStorageSync('wxcode', res.data.data.code);
+                // console.log(res.data.data.code);
+              }
+               
+            },
+            fail(res) {
+              console.log(res.data)
+            },
+            complete(res) {
+              
+            },
           })
         } else {
           console.log('登录失败！' + res.errMsg)
@@ -52,5 +67,6 @@ App({
     url:"http://fyd0108.xicp.io",
     userInfo: null,
     userSign: null,
+    
   }
 })

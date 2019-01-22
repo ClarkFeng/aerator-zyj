@@ -88,22 +88,29 @@ Page({
   getFishPonds: function () {
 
     var that = this;   // 这个地方非常重要，重置data{}里数据时候setData方法的this应为以及函数的this, 如果在下方的sucess                         直接写this就变成了wx.request()的this了
-
+    var wxcode = wx.getStorageSync('wxcode') 
     wx.request({
       url: app.globalData.url+'/api/zyj/fishponds/query', // 仅为示例，并非真实的接口地址
       data: {
-        x: '1',
-        y: '2'
+        "data": wxcode
       },
       header: {
         'content-type': 'application/json' // 默认值
       },
       method: 'POST',
       success(res) {
-        console.log(res.data),
+        console.log(res.data)
+        if (res.data.issuccess==1){
           that.setData({
-            grids: res.data.datas,
+            grids: res.data.data,
           })
+        }else{
+          wx.showModal({
+            title: '错误提示',
+            content: res.data.msg,
+          })
+        }
+          
       },
       fail(res) {
         console.log(res.data)

@@ -1,0 +1,54 @@
+<!--pages/farmerdetail/farmerdetail.wxml-->
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+
+    <view class="page__bd">
+      <view class='myimage'><image class='header'  src="../images/user.jpg" mode="aspecFill"bindtap="chooseimage"></image></view>
+    
+       <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_input firstcell">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">用户的ID</view>
+                </view>
+                <view class="weui-cell__bd">
+                    {{codeinput}}
+                </view>
+            </view>
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">真实姓名</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input bindinput="getnameinput" value="{{nameinput}}" class="weui-input" placeholder="请输入您的真实姓名"/>
+                </view>
+            </view>
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">电话号码</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input bindinput="gettelinput" value="{{telinput}}"  class="weui-input" placeholder="请输入您的电话号码"/>
+                </view>
+            </view>
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">电子邮箱</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input bindinput="getmailinput" value="{{mailinput}}"  class="weui-input" placeholder="请输入您的电子邮箱"/>
+                </view>
+            </view>
+           <view class="weui-cells__title">详细地址</view>
+          <view class="weui-cells weui-cells_after-title">
+              <view class="weui-cell">
+                  <view class="weui-cell__bd">
+                      <textarea value="{{addrinput}}" bindinput='getaddrinput' class="weui-textarea" placeholder="请输入您的详细地址" style="height: 3.3em" maxlength="50" />
+                      <view class="weui-textarea-counter">{{length}}/50</view>
+                  </view>
+              </view>
+          </view>
+       </view>
+       <view class="weui-btn-area">
+            <button class="weui-btn" type="primary" bindtap="farmersave">保存</button>
+        </view>
+    </view>
+</view>

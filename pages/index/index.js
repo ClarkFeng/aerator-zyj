@@ -2,6 +2,8 @@
 //获取应用实例
 const app = getApp()
 
+
+
 Page({
   data: {
     imgUrls: [
@@ -16,10 +18,18 @@ Page({
   },
 
   fishpondmanage:function(){
+    // var wxcode = wx.getStorageSync('wxcode') 
+    // console.log("#####我的微信session为："+wxcode);
       wx.navigateTo({
         url: '../fishpondmanage/fishpondmanage',
       })
 
+  },
+
+  farmerdetail:function(){
+    wx.navigateTo({
+      url: '../farmerdetail/farmerdetail',
+    })
   },
 
 

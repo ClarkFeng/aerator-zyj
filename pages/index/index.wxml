@@ -42,7 +42,7 @@
               <view class="placeholder"><text style="margin-left: -60px;margin-right:10px"  class="fa fa-jpy fa-2x"></text>费用管理</view>
             </view>
         </view>
-        <view class="weui-flex">
+        <view class="weui-flex"  bindtap='farmerdetail'>
             
             <view class="weui-flex__item">
               
