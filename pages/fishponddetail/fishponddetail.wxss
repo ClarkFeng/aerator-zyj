@@ -20,7 +20,9 @@ flex-direction: row;
 .title{
   flex: 1;
   color: rgb(114, 113, 113);
+
 }
+
 
 .refresh{
   margin-left: 3px;

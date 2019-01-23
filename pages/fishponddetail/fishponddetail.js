@@ -6,7 +6,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-      // id: ''
+    fishpondid: '',
+    fishpondname:'',
+    fishpondaddr:''
   },
 
   aeratoradd:function(){
@@ -20,11 +22,15 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // var that = this;
-    // that.setData({
-    //   id: options.id
-    // })
-    // console.log("接收的id是"+that.data.id)
+    var that = this;
+    that.setData({
+      fishpondid: options.fishpondid,
+      fishpondname: options.fishpondname,
+      fishpondaddr: options.fishpondaddr
+    })
+    console.log("接收的fishpondid是" + that.data.fishpondid)
+    console.log("接收的fishpondname是"+ that.data.fishpondname)
+    console.log("接收的fishpondaddr是" + that.data.fishpondaddr)
 
 
     wx.showLoading({

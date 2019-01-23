@@ -2,15 +2,19 @@
 <view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
 
     <view class="page__bd">
+        <view class="my-title"><view class='title'>鱼塘名称及描述</view>
+          <view class='refresh'><button style="background-color: #f18117;color:#ffffff"  bindtap="delpond" ><text  class='fa fa-times'></text>删除</button></view>
+
         
+        </view>
         <view class="weui-cells weui-cells_after-title">
             <view class="weui-cell">
-                <view >鱼塘名称</view>
+                <view >{{fishpondname}}</view>
                
             </view>
             <view class="weui-cell">
                 
-                <view >说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字</view>
+                <view >{{fishpondaddr}}</view>
             </view>
         </view>
 

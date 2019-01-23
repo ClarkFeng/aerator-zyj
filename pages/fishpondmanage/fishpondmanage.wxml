@@ -4,11 +4,13 @@
     <view class="page__bd">
         <view class="weui-grids">
             <block wx:for="{{grids}}" wx:key="{{index}}"  wx:for-index="index" wx:for-item="item">
-                <navigator url="../fishponddetail/fishponddetail?id={{item.id}}" class="weui-grid" hover-class="weui-grid_active">
+                <navigator url="../fishponddetail/fishponddetail?fishpondid={{item.fishpondid}}&fishpondname={{item.fishpondname}}&fishpondaddr={{item.fishpondaddr}}" class="weui-grid" hover-class="weui-grid_active">
                     
                     <!-- <image style='' class="weui-grid__icon" src="../images/icon_plus.png" /> -->
                     <!-- <icon type='success' size="93"></icon> -->
-                    <view  id="{{item.id}}" bindtap="bindViewTap11">{{item.id}}号鱼塘</view>
+                    <view  bindtap="bindViewTap11">{{item.fishpondname}}</view>
+                    <view  hidden="true">{{item.fishpondaddr}}</view>
+                    <view  hidden="true">{{item.fishpondid}}</view>
                 </navigator>
             </block>
               <navigator class="weui-grid" hover-class="weui-grid_active" url='../fishpondadd/fishpondadd'>
