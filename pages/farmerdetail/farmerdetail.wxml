@@ -37,7 +37,9 @@
                     <input bindinput="getmailinput" value="{{mailinput}}"  class="weui-input" placeholder="请输入您的电子邮箱"/>
                 </view>
             </view>
-           <view class="weui-cells__title">详细地址</view>
+          
+       </view>
+        <view class="weui-cells__title">详细地址</view>
           <view class="weui-cells weui-cells_after-title">
               <view class="weui-cell">
                   <view class="weui-cell__bd">
@@ -46,7 +48,6 @@
                   </view>
               </view>
           </view>
-       </view>
        <view class="weui-btn-area">
             <button class="weui-btn" type="primary" bindtap="farmersave">保存</button>
         </view>

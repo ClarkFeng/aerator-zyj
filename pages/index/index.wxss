@@ -1,6 +1,8 @@
 /**index.wxss**/
 
-
+.page__hd{
+  margin-bottom: 10px;
+}
 
 .placeholder{
 

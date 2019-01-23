@@ -78,7 +78,7 @@ Page({
       },
       method: 'POST',
       success(res) {
-        console.log(res.data)
+        // console.log(res.data)
         if (res.data.issuccess == 1) {
           wx.hideLoading();
           wx.showToast({
@@ -96,7 +96,7 @@ Page({
         }
       },
       fail(res) {
-        console.log(res.data)
+        // console.log(res.data)
         wx.hideLoading();
       },
       complete(res) {
@@ -126,7 +126,7 @@ Page({
       },
       method: 'POST',
       success(res) {
-        console.log(res.data)
+        // console.log(res.data)
         if (res.data.issuccess == 1){
           that.setData({
             codeinput: res.data.data.codeinput,
@@ -134,6 +134,7 @@ Page({
             telinput: res.data.data.telinput,
             mailinput: res.data.data.mailinput,
             addrinput: res.data.data.addrinput,
+            length: res.data.data.addrinput.length,
           })
           wx.hideLoading();
         } else {
@@ -145,7 +146,7 @@ Page({
         }
       },
       fail(res) {
-        console.log(res.data)
+        // console.log(res.data)
         wx.hideLoading();
       },
       complete(res) {
