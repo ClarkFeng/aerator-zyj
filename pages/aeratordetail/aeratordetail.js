@@ -149,18 +149,21 @@ Page({
       success(res) {
         console.log(res.data);
         if(res.data.issuccess==1){
-          // var times = 0
+          var times = 0
           that.setData({
             datas :res.data.datas,
           })
           
           var i =setInterval(function(){
-              // times++;
-              // if(times>10){
-              //   console.log('#######成功到达30次')
-              //   clearInterval(i)
-              //   wx.hideLoading();
-              // }
+              times++;
+              if(times>30){
+                console.log('#######成功到达30次')
+               
+                that.setData({
+                  offstatus: 1,
+                })
+                
+              }
             if (that.data.offstatus==1){//停止定时器
               clearInterval(i)
               wx.hideLoading();
