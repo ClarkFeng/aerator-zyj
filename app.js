@@ -11,6 +11,7 @@ App({
       success: res => {
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
         if (res.code) {
+          wx.clearStorageSync()
           // 发起网络请求
           wx.request({
             url: this.globalData.url +'/api/zyj/onLogin',
@@ -19,19 +20,19 @@ App({
               code: res.code
             },
             success(res) {
-              // console.log(res.data);
+              console.log(res.data);
               if(res.data.issuccess==1){
-                wx.clearStorageSync()
+               
                 wx.setStorageSync('wxcode', res.data.data.code);
-                // console.log(res.data.data.code);
+                console.log("当前登录的wxcode"+res.data.data.code);
               }
                
             },
             fail(res) {
-              // console.log(res.data)
+              console.log("失败"+res.data)
             },
             complete(res) {
-              
+              console.log("最后" +res.data)
             },
           })
         } else {

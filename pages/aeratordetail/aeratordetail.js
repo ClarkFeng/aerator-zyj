@@ -92,7 +92,7 @@ Page({
 
   posOpen:function(){
     wx.showLoading({
-      title: '加载中',
+      title: '处理中',
       mask: true,
     })
     this.downlink("posOpen");
@@ -114,6 +114,7 @@ Page({
     // var arrChk = new Array();
     var uuid = this.data.bindequipmentid;
     if (uuid==''){
+      wx.hideLoading();
       wx.showModal({
         title: '提示',
         content: '操作失败，该增氧机还未绑定',
@@ -125,6 +126,7 @@ Page({
         //   }
         // }
       })
+
       return;
     }
     // var arry = { "uuid": uuid };
