@@ -177,6 +177,9 @@ Page({
                   
                 })
               }
+              that.setData({
+                offstatus: 0,
+              })
               return;
             }
             that.queryOrderStatus();
