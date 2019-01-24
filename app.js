@@ -6,42 +6,7 @@ App({
     // logs.unshift(Date.now())
     // wx.setStorageSync('logs', logs)
 
-    // 登录
-    wx.login({
-      success: res => {
-        // 发送 res.code 到后台换取 openId, sessionKey, unionId
-        if (res.code) {
-          wx.clearStorageSync()
-          // 发起网络请求
-          wx.request({
-            url: this.globalData.url +'/api/zyj/onLogin',
-            method: 'POST',
-            data: {
-              code: res.code
-            },
-            success(res) {
-              console.log(res.data);
-              if(res.data.issuccess==1){
-               
-                wx.setStorageSync('wxcode', res.data.data.code);
-                console.log("当前登录的wxcode"+res.data.data.code);
-              }
-               
-            },
-            fail(res) {
-              console.log("失败"+res.data)
-            },
-            complete(res) {
-              console.log("最后" +res.data)
-            },
-          })
-        } else {
-          console.log('登录失败！' + res.errMsg)
-        }
 
-
-      }
-    })
     // 获取用户信息
     wx.getSetting({
       success: res => {

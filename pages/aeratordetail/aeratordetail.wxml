@@ -3,7 +3,7 @@
 
     <view class="page__bd">
         <view class="weui-flex">
-            <view class="weui-flex__item"><view class="placeholder"><button class="delbtn" hover-class='delbtn_hover'>删除</button></view></view>
+            <view class="weui-flex__item"><view class="placeholder"><button bindtap="delme" class="delbtn" hover-class='delbtn_hover'>删除</button></view></view>
             <view class="weui-flex__item"><view class="placeholder"><button bindtap="bindme" class="bindbtn" hover-class='bindbtn_hover'>绑定</button></view></view>
             <view class="weui-flex__item"><view class="placeholder"><button bindtap="posOpen" type="primary">启动</button></view></view>
             <view class="weui-flex__item"><view class="placeholder"><button bindtap="stop" type="warn">停止</button></view></view>

@@ -1,0 +1,11 @@
+<!--pages/welcome/welcome.wxml-->
+<view class="page">
+  <view class="logo"><image class="logo1" src="../images/logo1.jpg"   /></view>
+  <!-- <view class="title">聚能增氧机租赁平台</view> -->
+
+  <view class="page__bd">
+
+    <button class="firstbtn" bindtap="gotoindex">进入</button>
+
+  </view>
+</view>
