@@ -81,7 +81,8 @@ Page({
           wx.hideLoading();
           wx.showModal({
             title: '错误提示',
-            content: res.data.msg,
+            content: res.data.msg, 
+            showCancel: false
           })
         }
       },

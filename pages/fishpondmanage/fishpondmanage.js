@@ -108,6 +108,7 @@ Page({
           wx.showModal({
             title: '错误提示',
             content: res.data.msg,
+            showCancel: false
           })
         }
           

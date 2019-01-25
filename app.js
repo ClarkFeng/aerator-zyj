@@ -36,6 +36,7 @@ App({
                 wx.showModal({
                   title: '错误提示',
                   content: res.data.msg,
+                  showCancel: false
                 })
               }
 
@@ -46,6 +47,7 @@ App({
               wx.showModal({
                 title: '错误提示',
                 content: '发生错误，请重试' + res.data,
+                showCancel: false
               })
             },
             complete(res) {
@@ -58,6 +60,7 @@ App({
           wx.showModal({
             title: '错误提示',
             content: '发生错误，请重试' + res.errMsg,
+            showCancel:false
           })
         }
       }

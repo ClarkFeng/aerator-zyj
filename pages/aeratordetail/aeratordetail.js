@@ -175,9 +175,9 @@ Page({
                 })
               }else{
                 wx.showModal({
-                  title: '提示',
+                  title: '错误提示',
                   content: '操作失败',
-                  
+                  showCancel: false
                 })
               }
               that.setData({
@@ -191,8 +191,9 @@ Page({
 
         }else{
           wx.showModal({
-            title: '提示',
+            title: '错误提示',
             content: res.data.msg,
+            showCancel: false
           })
           wx.hideLoading();
         } 
@@ -201,8 +202,9 @@ Page({
       fail(res) {
         console.log(res.data)
         wx.showModal({
-          title: '提示',
+          title: '错误提示',
           content: res.data,
+          showCancel: false
         })
         wx.hideLoading();
       },
