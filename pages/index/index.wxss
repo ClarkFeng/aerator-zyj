@@ -110,6 +110,7 @@ width: 200px;
 
 .cost{
   margin-right: 10px;
+  margin-bottom: 10px;
 }
 
 .costdetail{
