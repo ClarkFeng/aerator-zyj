@@ -28,26 +28,69 @@
           </swiper>
     </view>
     <view class="page__bd">
-
-        <view class="weui-flex" bindtap='fishpondmanage'>
+        <view class="box box_1">
+              <view class='myimage'><image class='header'  src="../images/user.jpg" mode="aspecFill"bindtap="chooseimage"></image></view>
+              <view class="cost">
+              <view class="mymoney">¥9999.99</view>
+              <view class="costdetail">费用明细>></view>
+              </view>
+              
+        </view>
+        <view class="box">
+            <view class="weui-flex_my" bindtap='fishpondmanage'>
            
-            <view class="weui-flex__item">
-            <view class="placeholder"><text style=' margin-left:-85px;' class="fa fa-cloud fa-2x"></text>鱼塘管理</view>
+                <view class="weui-flex__item_my">
+                <view class="placeholder2">
+                <!-- <text style=' margin-left:-85px;' class="fa fa-cloud fa-2x"></text> -->
+                <view class="name">我的鱼塘 </view>
+                </view>
+                </view>
             </view>
-        </view>
-        <view class="weui-flex">
-            
-            <view class="weui-flex__item">
-              
-              <view class="placeholder"><text style="margin-left: -60px;margin-right:10px"  class="fa fa-jpy fa-2x"></text>费用管理</view>
+            <view class="weui-flex_my">
+                
+                <view class="weui-flex__item_my">
+                  
+                  <view class="placeholder2">
+                  <!-- <text style="margin-left: -60px;margin-right:10px"  class="fa fa-jpy fa-2x"></text> -->
+                  <view class="name">我的增氧机</view>
+                  </view>
+                </view>
             </view>
-        </view>
-        <view class="weui-flex"  bindtap='farmerdetail'>
-            
-            <view class="weui-flex__item">
-              
-              <view class="placeholder"><text style="margin-left: -65px;margin-right:10px" class="fa fa-user fa-2x"></text>用户管理</view>
+            <view class="weui-flex_my"  >
+                
+                <view class="weui-flex__item_my">
+                  
+                  <view class="placeholder2">
+                  <!-- <text style="margin-left: -65px;margin-right:10px" class="fa fa-user fa-2x"></text> -->
+                  <view class="name">联系代理</view>
+                  </view>
+                </view>
             </view>
+        
         </view>
+        <view class="box">
+            <view class="weui-flex_my" >
+           
+                <view class="weui-flex__item_my">
+                <view class="placeholder2">
+                <!-- <text style=' margin-left:-85px;' class="fa fa-cloud fa-2x"></text> -->
+                <view class="name">会员管理</view>
+                </view>
+                </view>
+            </view>
+            <view class="weui-flex_my">
+                
+                <view class="weui-flex__item_my">
+                  
+                  <view class="placeholder2">
+                  <!-- <text style="margin-left: -60px;margin-right:10px"  class="fa fa-jpy fa-2x"></text> -->
+                  <view class="name">设备情况</view>
+                  </view>
+                </view>
+            </view>
+
+        
+        </view>
+
     </view>
 </view>

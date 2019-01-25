@@ -14,23 +14,68 @@
     line-height:89px;
     color: #f3fafa;
     font-size: 35px;
-   
+  
 }
 
 
-.weui-flex__item{
+.placeholder2{
+
+    
+   
+
+    /* background-color: #26C281; */
+    
+    
+    color: #f3fafa;
+    font-size: 15px;
+   
+    
+}
+
+
+.weui-flex__item_my{
   background-color: rgba(14, 165, 235, 0.671);
-  margin: 10px 10px;
+  margin: 10px 5px;
  box-shadow:0px 2px 6px #000;
   border-radius:5px;
+  height: 89px; 
+
 }
+.weui-flex__item_my {
+-webkit-box-flex:1;
+/* -webkit-flex:3;
+flex:3; */
+
+}
+.name{
+  text-align: center;
+  vertical-align:middle;
+  line-height:89px;
+  
+}
+
+.box{
+    display: flex;
+    flex-direction: row;
+}
+.box_1{
+
+  background-color: rgba(255, 255, 255, 0.671);
+  margin: 0 5px;
+  
+}
+.weui-flex_my{
+  width: 33.33333333%;
+  
+}
+
 
 
 text{
-      color: #ffffff;
+    color: #ffffff;
     opacity: 0.2;
-     margin-left: -55px;
-      font-size: 100px;
+    /* margin-left: -55px; */
+    font-size: 20px;
       /* line-height: 110px; */
       
 }
@@ -41,4 +86,33 @@ height:100%;
 display:inline-block;
 overflow:hidden;
 
+}
+
+.header{
+  width: 140rpx;
+  height: 140rpx;
+  position: relative;
+  top: 20rpx;
+  left: 30rpx;
+  z-index:20;
+  border-radius:50%;
+  margin-bottom: 20rpx;
+  
+}
+.myimage{
+text-align:left;
+width: 200px;
+}
+.mymoney{
+  font-size: 36px;
+  
+}
+
+.cost{
+  margin-right: 10px;
+}
+
+.costdetail{
+  font-size: 15px;
+  text-align: right;
 }
