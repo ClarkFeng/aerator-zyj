@@ -36,7 +36,7 @@
 .weui-flex__item_my{
   background-color: rgba(14, 165, 235, 0.671);
   margin: 10px 5px;
- box-shadow:0px 2px 6px #000;
+ box-shadow:0px 2px 6px #000;/* (投影方式)(X轴偏移量)(Y轴偏移量)(阴影模糊半径)(阴影扩展半径)(阴影颜色).*/
   border-radius:5px;
   height: 89px; 
 
@@ -60,8 +60,9 @@ flex:3; */
 }
 .box_1{
 
-  background-color: rgba(255, 255, 255, 0.671);
+  background-color: rgba(255, 255, 255, 0.571);
   margin: 0 5px;
+  box-shadow:0px 0px 0.1px rgb(207, 204, 204);
   
 }
 .weui-flex_my{
@@ -111,9 +112,11 @@ width: 200px;
 .cost{
   margin-right: 10px;
   margin-bottom: 10px;
+  color: rgb(68, 68, 68);
 }
 
 .costdetail{
   font-size: 15px;
   text-align: right;
+  
 }
