@@ -161,6 +161,7 @@ Page({
                
                 that.setData({
                   offstatus: 1,
+                  status:"99"
                 })
                 
               }
@@ -172,6 +173,12 @@ Page({
                   title: '操作成功',
                   icon: 'success',
                   duration: 2000
+                })
+              } else if (that.data.status == "99"){
+                wx.showModal({
+                  title: '错误提示',
+                  content: '请求超时，操作失败',
+                  showCancel: false
                 })
               }else{
                 wx.showModal({
