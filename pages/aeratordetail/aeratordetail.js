@@ -10,7 +10,7 @@ Page({
       description:'',
       bindequipmentid:'',
       datas:'',
-      offstatus:0,
+      offstatus:'',
       status:'',
   },
 
@@ -139,6 +139,10 @@ Page({
     var jsons = { "uuid": uuid, "commandName": commandName };
     var jsonStr = JSON.stringify(jsons);
     console.log("jsonStr:" + jsonStr);
+    that.setData({
+      offstatus: "",
+      status: ""
+    })
     wx.request({
       url: app.globalData.url + '/api/zyj/downlink', // 仅为示例，并非真实的接口地址
       data: jsonStr,
