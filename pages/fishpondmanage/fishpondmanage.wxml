@@ -15,7 +15,7 @@
             </block>
               <navigator class="weui-grid" hover-class="weui-grid_active" url='../fishpondadd/fishpondadd'>
                   <view class=" mygrid" ></view>
-                  <view class="tip">增加鱼塘</view>
+                  <!-- <view class="tip">增加鱼塘</view> -->
               </navigator>
         </view>
     </view>
