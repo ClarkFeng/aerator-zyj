@@ -1,6 +1,6 @@
 {
   "pages": [
-   
+     
     "pages/index/index",
     "pages/logs/logs",
     "pages/welcome/welcome",
@@ -8,7 +8,7 @@
     "pages/fishponddetail/fishponddetail",
     "pages/fishpondmanage/fishpondmanage",
     "pages/farmerdetail/farmerdetail",
-    "pages/aeratordetail/aeratordetail",
+"pages/aeratordetail/aeratordetail",
     "pages/aeratoradd/aeratoradd"
    
   ],

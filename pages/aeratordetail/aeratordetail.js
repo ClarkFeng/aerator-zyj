@@ -112,6 +112,14 @@ Page({
 
   },
 
+  negOpen:function(){
+    wx.showLoading({
+      title: '处理中',
+      mask: true,
+    })
+    this.downlink("negOpen");
+  }
+
   downlink: function (commandName){
     var that = this;   // 这个地方非常重要，重置data{}里数据时候setData方法的this应为以及函数的this, 如果在下方的sucess 直接写this就变成了wx.request()的this了
     //{"uuid":"xxxx","commandName":"xxxxx"}
