@@ -8,7 +8,10 @@ Page({
   data: {
     fishpondid: '',
     fishpondname:'',
-    fishpondaddr:''
+    fishpondaddr:'',
+    machinestatus: "online",
+    isChecked1:true,
+    tiptext:"运行中"
   },
 
   delpond:function(){

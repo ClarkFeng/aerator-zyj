@@ -16,6 +16,11 @@
   color: #ffffff
 }
 
+.negbtn{
+  background-color: #17d0f1;
+  color: #ffffff;
+}
+
 .bindbtn_hover{
    background-color: #17a1c4;
    color:rgba(255, 255, 255, 0.6);

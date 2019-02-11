@@ -43,4 +43,38 @@ flex-direction: row;
 
 }
 
+.avatar-box.online:after {
+    background: #7bee5b;
+}
 
+.avatar-box.offline:after {
+    background: #ee5b5b;
+}
+
+.avatar-box:after {
+    content: "";
+    position: absolute;
+    left: -19px;
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    background: #b5b5b5;
+    z-index: 66;
+    border: 1px solid #323347;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+
+
+}
+
+.myinaccess {
+  right: 9px;
+  position:relative;
+
+}
+
+.tiptext{
+  font-size: 17px;
+  margin-right: 3px;
+
+}

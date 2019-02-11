@@ -24,7 +24,7 @@
         
         </view>
        
-         <view class="weui-cells weui-cells_after-title mingxi">
+         <!-- <view class="weui-cells weui-cells_after-title mingxi">
           <block wx:for="{{grids}}" wx:key="{{index}}"  wx:for-index="index" wx:for-item="item">
               <navigator url="../aeratordetail/aeratordetail?name={{item.name}}&description={{item.description}}&bindequipmentid={{item.bindequipmentid}}" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
                   <view data-name='{{item.name}}' class="weui-cell__bd">{{item.name}}</view>
@@ -33,7 +33,20 @@
                   <view class="weui-cell__ft weui-cell__ft_in-access">运行状态</view>
               </navigator>
           </block>
-        </view>
+        </view> -->
+        <view class="weui-cells weui-cells_after-title mingxi"role=""aria-label="">
+          <navigator class="weui-cell weui-cell_access " url="../aeratordetail/aeratordetail?name=8号机&description=鱼塘中间&bindequipmentid="role="navigation"aria-label="">
+          <view class="weui-cell__bd"data-name="8号机"role=""aria-label="">8号机</view>
+          <view data-description="鱼塘中间"hidden="true" role=""aria-label="">鱼塘中间</view>
+         
+          <!-- <view class="weui-cell__ft weui-cell__ft_in-access"role=""aria-label=""> -->
+          <view class="weui-cell__ft "role=""aria-label="">
+          
+           <span class="tiptext myinaccess"> <span class="avatar-box {{machinestatus}}"></span>{{tiptext}}</span>
+            <switch  checked="{{isChecked1}}" catchtap="changeSwitch1"/>
+           </view>
+          </navigator>
+          </view>
        
     </view>
 </view>
