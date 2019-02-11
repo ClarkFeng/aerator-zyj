@@ -1,16 +1,16 @@
 {
   "pages": [
-    "pages/fishponddetail/fishponddetail",
+
     "pages/index/index",
     "pages/logs/logs",
     "pages/welcome/welcome",
     "pages/fishpondadd/fishpondadd",
-
+    "pages/fishponddetail/fishponddetail",
     "pages/fishpondmanage/fishpondmanage",
     "pages/farmerdetail/farmerdetail",
     "pages/aeratordetail/aeratordetail",
+        "pages/ecanalysis/ecanalysis",
     "pages/aeratoradd/aeratoradd"
-   
   ],
   "window": {
     "backgroundTextStyle": "dark",

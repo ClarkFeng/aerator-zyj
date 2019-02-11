@@ -79,16 +79,19 @@
                 </view>
             </view>
             <view class="weui-flex_my">
-                
                 <view class="weui-flex__item_my">
-                  
                   <view class="placeholder2">
-                  <!-- <text style="margin-left: -60px;margin-right:10px"  class="fa fa-jpy fa-2x"></text> -->
                   <view class="name">设备情况</view>
                   </view>
                 </view>
             </view>
-
+            <view class="weui-flex_my" bindtap='ecanalysis'>
+                <view class="weui-flex__item_my">
+                  <view class="placeholder2">
+                  <view class="name">图表分析</view>
+                  </view>
+                </view>
+            </view>
         
         </view>
 
