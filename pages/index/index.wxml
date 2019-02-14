@@ -48,7 +48,7 @@
             </view>
             <view class="weui-flex_my">
                 
-                <view class="weui-flex__item_my">
+                <view class="weui-flex__item_my my1">
                   
                   <view class="placeholder2">
                   <!-- <text style="margin-left: -60px;margin-right:10px"  class="fa fa-jpy fa-2x"></text> -->
@@ -58,7 +58,7 @@
             </view>
             <view class="weui-flex_my"  >
                 
-                <view class="weui-flex__item_my">
+                <view class="weui-flex__item_my my2">
                   
                   <view class="placeholder2">
                   <!-- <text style="margin-left: -65px;margin-right:10px" class="fa fa-user fa-2x"></text> -->
@@ -71,7 +71,7 @@
         <view class="box">
             <view class="weui-flex_my" >
            
-                <view class="weui-flex__item_my">
+                <view class="weui-flex__item_my my3">
                 <view class="placeholder2">
                 <!-- <text style=' margin-left:-85px;' class="fa fa-cloud fa-2x"></text> -->
                 <view class="name">会员管理</view>
@@ -79,14 +79,14 @@
                 </view>
             </view>
             <view class="weui-flex_my">
-                <view class="weui-flex__item_my">
+                <view class="weui-flex__item_my my4">
                   <view class="placeholder2">
                   <view class="name">设备情况</view>
                   </view>
                 </view>
             </view>
             <view class="weui-flex_my" bindtap='ecanalysis'>
-                <view class="weui-flex__item_my">
+                <view class="weui-flex__item_my my5">
                   <view class="placeholder2">
                   <view class="name">图表分析</view>
                   </view>

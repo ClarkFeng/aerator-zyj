@@ -57,6 +57,8 @@ flex:3; */
 .box{
     display: flex;
     flex-direction: row;
+   
+    margin-top: 5px;
 }
 .box_1{
 
@@ -119,4 +121,24 @@ width: 200px;
   font-size: 15px;
   text-align: right;
   
+}
+
+.my1{
+  background-color: #3989fc;
+}
+
+.my2{
+  background-color: #7879ff;
+}
+
+.my3{
+  background-color: #eb5846;
+}
+
+.my4{
+  background-color: #49d29e;
+}
+
+.my5{
+  background-color: #f19861;
 }
