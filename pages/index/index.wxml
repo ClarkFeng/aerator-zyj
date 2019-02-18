@@ -28,6 +28,7 @@
           </swiper>
     </view>
     <view class="page__bd">
+    <view class="caption">我的余额</view>
         <view class="box box_1">
               <view class='myimage'><image class='header'  src="../images/user.jpg" mode="aspecFill"bindtap="chooseimage"></image></view>
               <view class="cost">
@@ -36,6 +37,7 @@
               </view>
               
         </view>
+        <view class="caption">业务功能</view>
         <view class="box">
             <view class="weui-flex_my" bindtap='fishpondmanage'>
            

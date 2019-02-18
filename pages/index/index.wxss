@@ -1,7 +1,7 @@
 /**index.wxss**/
 
 .page__hd{
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .placeholder{
@@ -31,15 +31,20 @@
    
     
 }
-
+.caption{
+  margin-left: 5px;
+  font-weight: bold;
+  font-size: 11pt;
+  color: #5c5c5c;
+}
 
 .weui-flex__item_my{
-  /* background-color: rgba(14, 165, 235, 0.671); */
-  background-color: #37cc9f;
+ background-color: rgba(14, 165, 235, 0.671); 
+
   margin: 5px 5px;
  box-shadow:0px 2px 6px #000;/* (投影方式)(X轴偏移量)(Y轴偏移量)(阴影模糊半径)(阴影扩展半径)(阴影颜色).*/
   border-radius:5px;
-  height: 89px; 
+   height: 89px;  
 
 }
 .weui-flex__item_my {
@@ -65,12 +70,15 @@ flex:3; */
 
   background-color: rgba(255, 255, 255, 0.571);
   margin: 5px 5px;
-  box-shadow:0px 0px 0.1px rgb(207, 204, 204);
-  
+  box-shadow:0px 0px 6px 0.1px rgb(207, 204, 204);
+  border-radius:5px;
+  flex-direction: row;
+ justify-content: space-between;
+  align-items: center;
 }
 .weui-flex_my{
   width: 33.33333333%;
-  
+  height: 100%;
 }
 
 
@@ -104,7 +112,7 @@ overflow:hidden;
   
 }
 .myimage{
-text-align:left;
+/* text-align:left; */
 width: 200px;
 }
 .mymoney{
@@ -116,6 +124,7 @@ width: 200px;
   margin-right: 10px;
   margin-bottom: 10px;
   color: rgb(68, 68, 68);
+  right: 5px;
 }
 
 .costdetail{
