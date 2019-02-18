@@ -123,22 +123,3 @@ width: 200px;
   
 }
 
-.my1{
-  background-color: #3989fc;
-}
-
-.my2{
-  background-color: #7879ff;
-}
-
-.my3{
-  background-color: #eb5846;
-}
-
-.my4{
-  background-color: #49d29e;
-}
-
-.my5{
-  background-color: #f19861;
-}
