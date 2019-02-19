@@ -71,7 +71,7 @@
         
         </view>
         <view class="box">
-            <view class="weui-flex_my" >
+            <view class="weui-flex_my" bindtap='farmerdetail'>
            
                 <view class="weui-flex__item_my my3">
                 <view class="placeholder2">
