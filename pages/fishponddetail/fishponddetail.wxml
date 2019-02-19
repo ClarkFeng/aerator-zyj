@@ -1,5 +1,5 @@
 <!--pages/fishponddetail/fishponddetail.wxml-->
-<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+<view class="page">
 
     <view class="page__bd">
         <view class="my-title"><view class='title'>鱼塘名称及描述</view>

@@ -1,7 +1,9 @@
 {
   "pages": [
-
+    
     "pages/index/index",
+    "pages/costdetail/costdetail",
+    
     "pages/logs/logs",
     "pages/welcome/welcome",
     "pages/fishpondadd/fishpondadd",
@@ -9,8 +11,9 @@
     "pages/fishpondmanage/fishpondmanage",
     "pages/farmerdetail/farmerdetail",
     "pages/aeratordetail/aeratordetail",
-        "pages/ecanalysis/ecanalysis",
+    "pages/ecanalysis/ecanalysis",
     "pages/aeratoradd/aeratoradd"
+    
   ],
   "window": {
     "backgroundTextStyle": "dark",

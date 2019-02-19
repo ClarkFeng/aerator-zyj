@@ -17,6 +17,13 @@ Page({
     duration: 1000
   },
 
+  costdetail: function () {
+    wx.navigateTo({
+      url: '../costdetail/costdetail',
+    })
+
+  },
+
   fishpondmanage:function(){
     // var wxcode = wx.getStorageSync('wxcode') 
     // console.log("#####我的微信session为："+wxcode);

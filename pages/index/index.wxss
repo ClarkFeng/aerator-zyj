@@ -130,6 +130,6 @@ width: 200px;
 .costdetail{
   font-size: 15px;
   text-align: right;
-  
+  color: rgb(33, 186, 247);
 }
 
