@@ -9,6 +9,7 @@ Page({
       name:'',
       description:'',
       bindequipmentid:'',
+      aeratorid:'',
       datas:'',
       offstatus:'',
       status:'',
@@ -23,7 +24,8 @@ Page({
 
       name: options.name,
       description: options.description,
-      bindequipmentid: options.bindequipmentid
+      bindequipmentid: options.bindequipmentid,
+      aeratorid: options.aeratorid
     })
     console.log("接收的name是" + that.data.name);
     console.log("接收的description是" + that.data.description);
@@ -88,7 +90,68 @@ Page({
     wx.scanCode({
       onlyFromCamera: true,
       success(res) {
+        console.log(res.result)
+        var bindcode = res.result
+        wx.showLoading({
+          title: '处理中',
+          mask: true,
+        })
+        var that = this;
+        var wxcode = wx.getStorageSync('wxcode');
+        wx.request({
+          url: app.globalData.url + '/api/zyj/aerators/bind', // 仅为示例，并非真实的接口地址
+          data: {
+            "data": wxcode,
+            "bindcode": bindcode,
+            "aeratorid": that.data.aeratorid
+          },
+          header: {
+            'content-type': 'application/json' // 默认值
+          },
+          method: 'POST',
+          success(res) {
+            // console.log(res.data)
+            if (res.data.issuccess == 1) {
+              wx.showToast({
+                title: res.data.msg,
+                icon: 'success',
+                duration: 2000
+              })
+
+              wx.hideLoading();
+            } else {
+              wx.hideLoading();
+              wx.showModal({
+                title: '错误提示',
+                content: res.data.msg,
+                showCancel: false
+              })
+            }
+          },
+          fail(res) {
+            // console.log(res.data)
+            wx.hideLoading();
+          },
+          complete(res) {
+            // wx.hideLoading();
+            //wx.stopPullDownRefresh() //停止下拉刷新
+          }
+        })
+
+
+
+      },
+      fail(res) {
         console.log(res)
+        wx.showModal({
+          title: '错误提示',
+          content: res,
+          showCancel: false
+        })
+        
+      },
+      complete(res) {
+
       }
     })
 
@@ -143,8 +206,8 @@ Page({
     }
     // var arry = { "uuid": uuid };
     // arrChk.push(arry);
-
-    var jsons = { "uuid": uuid, "commandName": commandName };
+    var wxcode = wx.getStorageSync('wxcode')
+    var jsons = {"data":wxcode, "uuid": uuid, "commandName": commandName };
     var jsonStr = JSON.stringify(jsons);
     console.log("jsonStr:" + jsonStr);
     that.setData({
