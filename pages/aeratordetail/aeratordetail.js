@@ -87,74 +87,79 @@ Page({
 
   bindme:function(){
     // 只允许从相机扫码
+    var that = this;
+    var bindcode = '';
     wx.scanCode({
       onlyFromCamera: true,
       success(res) {
         console.log(res.result)
-        var bindcode = res.result
-        wx.showLoading({
-          title: '处理中',
-          mask: true,
-        })
-        var that = this;
-        var wxcode = wx.getStorageSync('wxcode');
-        wx.request({
-          url: app.globalData.url + '/api/zyj/aerators/bind', // 仅为示例，并非真实的接口地址
-          data: {
-            "data": wxcode,
-            "bindcode": bindcode,
-            "aeratorid": that.data.aeratorid
-          },
-          header: {
-            'content-type': 'application/json' // 默认值
-          },
-          method: 'POST',
-          success(res) {
-            // console.log(res.data)
-            if (res.data.issuccess == 1) {
-              wx.showToast({
-                title: res.data.msg,
-                icon: 'success',
-                duration: 2000
-              })
+        bindcode = res.result
+        console.log("我的设备码是" + bindcode)
+        if (bindcode != '') {
+          wx.showLoading({
+            title: '处理中',
+            mask: true,
+          })
 
-              wx.hideLoading();
-            } else {
+          var wxcode = wx.getStorageSync('wxcode');
+          wx.request({
+            url: app.globalData.url + '/api/zyj/aerators/bind', // 仅为示例，并非真实的接口地址
+            data: {
+              "data": wxcode,
+              "bindcode": bindcode,
+              "aeratorid": that.data.aeratorid
+            },
+            header: {
+              'content-type': 'application/json' // 默认值
+            },
+            method: 'POST',
+            success(res) {
+              // console.log(res.data)
+              if (res.data.issuccess == 1) {
+                wx.hideLoading();
+                wx.showToast({
+                  title: res.data.msg,
+                  icon: 'success',
+                  duration: 3000
+                })
+
+
+              } else {
+                wx.hideLoading();
+                wx.showModal({
+                  title: '错误提示',
+                  content: res.data.msg,
+                  showCancel: false
+                })
+              }
+            },
+            fail(res) {
+              // console.log(res.data)
               wx.hideLoading();
               wx.showModal({
                 title: '错误提示',
-                content: res.data.msg,
+                content: res,
                 showCancel: false
               })
+            },
+            complete(res) {
+              // wx.hideLoading();
+              //wx.stopPullDownRefresh() //停止下拉刷新
             }
-          },
-          fail(res) {
-            // console.log(res.data)
-            wx.hideLoading();
-          },
-          complete(res) {
-            // wx.hideLoading();
-            //wx.stopPullDownRefresh() //停止下拉刷新
-          }
-        })
-
-
-
+          })
+        }
       },
       fail(res) {
         console.log(res)
-        wx.showModal({
-          title: '错误提示',
-          content: res,
-          showCancel: false
-        })
+
         
       },
       complete(res) {
+        
 
       }
     })
-
+    
   },
 
   posOpen:function(){
