@@ -67,36 +67,36 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-    wx.showLoading({
-      title: '重新加载中',
-      mask: true,
-    })
-    var that = this;   // 这个地方非常重要，重置data{}里数据时候setData方法的this应为以及函数的this, 如果在下方的sucess                         直接写this就变成了wx.request()的this了
-    var wxcode = wx.getStorageSync('wxcode')
-    wx.request({
-      url: app.globalData.url + '/api/zyj/checksession', // 仅为示例，并非真实的接口地址
-      data: {
-        "data": wxcode
-      },
-      header: {
-        'content-type': 'application/json' // 默认值
-      },
-      method: 'POST',
-      success(res) {
-        console.log(res.data)
-        if (res.data.issuccess == "99999999") {
-          that.onLogin();
-        } 
+    // wx.showLoading({
+    //   title: '重新加载中',
+    //   mask: true,
+    // })
+    // var that = this;   // 这个地方非常重要，重置data{}里数据时候setData方法的this应为以及函数的this, 如果在下方的sucess                         直接写this就变成了wx.request()的this了
+    // var wxcode = wx.getStorageSync('wxcode')
+    // wx.request({
+    //   url: app.globalData.url + '/api/zyj/checksession', // 仅为示例，并非真实的接口地址
+    //   data: {
+    //     "data": wxcode
+    //   },
+    //   header: {
+    //     'content-type': 'application/json' // 默认值
+    //   },
+    //   method: 'POST',
+    //   success(res) {
+    //     console.log(res.data)
+    //     if (res.data.issuccess == "99999999") {
+    //       that.onLogin();
+    //     } 
 
-      },
-      fail(res) {
-        console.log(res.data)
-      },
-      complete(res) {
-        wx.hideLoading();
-        wx.stopPullDownRefresh() //停止下拉刷新
-      },
-    })
+    //   },
+    //   fail(res) {
+    //     console.log(res.data)
+    //   },
+    //   complete(res) {
+    //     wx.hideLoading();
+    //     wx.stopPullDownRefresh() //停止下拉刷新
+    //   },
+    // })
   },
 
   onLogin:function(){

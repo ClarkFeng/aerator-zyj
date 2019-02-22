@@ -1,11 +1,22 @@
 <!--pages/welcome/welcome.wxml-->
 <view class="page">
-  <view class="logo"><image class="logo1" src="../images/logo1.jpg"   /></view>
-  <!-- <view class="title">聚能增氧机租赁平台</view> -->
 
   <view class="page__bd">
+    <view class="box">
+      <view class="content">
+            <view class="ficon"><text class="fa fa-male"></text></view>
+            <view class="name">分销商</view>
+      </view>
 
-    <button class="firstbtn" bindtap="gotoindex">进入</button>
-
+    </view>
+    <view class="box">
+      <view class="content">
+              <view class="ficon"><text class="fa fa-user-o fa1"></text></view>
+              <view class="name">租户</view>
+        </view>
+      
+    </view>
   </view>
+
+  <view class="weui-footer">Copyright ©2019- ClarkFeng</view>
 </view>

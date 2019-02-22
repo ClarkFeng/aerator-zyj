@@ -5,30 +5,56 @@ page{
   background-color: #ffffff;
 }
 
-.logo{
-text-align: center;
-margin-top: 25%;
-}
-.logo1{
-  height: 200px;
-  width: 300px;
+.page__bd{
+    margin-top: 20%;
 }
 
-.title{
-  font-size: 69rpx;
-  color: rgb(38, 178, 243);
+
+.box{
+    display: flex;
+    flex-direction: row;
+     background-color: rgba(255, 255, 255, 0.571);
+    margin: 15px 90px;
+    height: 150px;
+    box-shadow:0px 0px 6px 0.1px rgb(207, 204, 204);
+    border-radius:5px;
+    /* justify-content: space-between; 
+    align-items: center; */
+     font-size: 19px;
+      color: #7e8080;
+}
+
+.content{
   text-align: center;
-  margin-top: 25px;
+      display: flex;
+      flex-direction: column;
+       width: 100%;
+       margin-top: 25%;
+}
+.fa{
+  text-align: center;
+  width: 100%;
+  font-size: 50px;
+}
+.fa1{
+  font-size: 45px;
 }
 
+.ficon{
 
-.firstbtn{
-  margin-top: 50px;
-  margin-left: 50px;
-  margin-right: 50px;
-  font-size: 40rpx;
-  color: #ffffff;
-  background-color: rgb(38, 178, 243);
+  width: 100%;
 }
 
+.name{
+  margin-top: 5px;
+  text-align: center;
+     
+
+    width: 100%;
+}
+
+.weui-footer{
+  margin-top: 30px;
+
+}
 
