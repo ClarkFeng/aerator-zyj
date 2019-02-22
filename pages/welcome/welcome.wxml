@@ -3,14 +3,14 @@
 
   <view class="page__bd">
     <view class="box">
-      <view class="content">
+      <view class="content" bindtap="salerindex">
             <view class="ficon"><text class="fa fa-male"></text></view>
             <view class="name">分销商</view>
       </view>
 
     </view>
     <view class="box">
-      <view class="content">
+      <view class="content" bindtap="farmerindex">
               <view class="ficon"><text class="fa fa-user-o fa1"></text></view>
               <view class="name">租户</view>
         </view>
